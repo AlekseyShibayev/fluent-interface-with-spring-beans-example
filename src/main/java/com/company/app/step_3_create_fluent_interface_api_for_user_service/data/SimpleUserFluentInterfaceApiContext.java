@@ -4,13 +4,13 @@ import com.company.app.step_2_create_facade_for_user_service.crud.api.UserCreato
 import com.company.app.step_2_create_facade_for_user_service.crud.api.UserFinder;
 import com.company.app.step_2_create_facade_for_user_service.crud.api.UserRemover;
 import com.company.app.step_2_create_facade_for_user_service.crud.api.UserUpdater;
-import com.company.app.step_3_create_fluent_interface_api_for_user_service.component.UserFluentInterfaceApiBeansBag;
+import com.company.app.step_3_create_fluent_interface_api_for_user_service.component.SimpleUserFluentInterfaceApiBeansBag;
 import lombok.Builder;
 
 @Builder
-public class UserFluentInterfaceApiContext {
+public class SimpleUserFluentInterfaceApiContext {
 
-    private UserFluentInterfaceApiBeansBag beansBag;
+    private SimpleUserFluentInterfaceApiBeansBag beansBag;
 
     public UserCreator create() {
         return beansBag.getUserCreator();

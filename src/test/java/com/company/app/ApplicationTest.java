@@ -5,7 +5,8 @@ import com.company.app.domain.entity.User;
 import com.company.app.springboottest.SpringBootTestApplicationContext;
 import com.company.app.step_1_create_classical_user_service.ClassicalUserService;
 import com.company.app.step_2_create_facade_for_user_service.UserServiceFacade;
-import com.company.app.step_3_create_fluent_interface_api_for_user_service.UserFluentInterfaceApi;
+import com.company.app.step_3_create_fluent_interface_api_for_user_service.SimpleUserFluentInterfaceApi;
+import com.company.app.step_4_update_fluient_interface_api_with_small_actions.ExtendedUserFluentInterfaceApi;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +25,9 @@ class ApplicationTest extends SpringBootTestApplicationContext {
     @Autowired
     private UserServiceFacade userServiceFacade;
     @Autowired
-    private UserFluentInterfaceApi userFluentInterfaceApi;
+    private SimpleUserFluentInterfaceApi simpleUserFluentInterfaceApi;
+    @Autowired
+    private ExtendedUserFluentInterfaceApi extendedUserFluentInterfaceApi;
 
     @Test
     void context_must_be_test() {
@@ -52,11 +55,21 @@ class ApplicationTest extends SpringBootTestApplicationContext {
     }
 
     @Test
-    void userFluentInterfaceApi_example() {
+    void simpleUserFluentInterfaceApi_example() {
         String number = String.valueOf(counter.addAndGet(1));
         UserDto userDto = createUserDto(number);
 
-        User user = userFluentInterfaceApi.api().create().oneBy(userDto);
+        User user = simpleUserFluentInterfaceApi.api().create().oneBy(userDto);
+
+        Assertions.assertEquals(number, user.getNumber());
+    }
+
+    @Test
+    void extendedUserFluentInterfaceApi_example() {
+        String number = String.valueOf(counter.addAndGet(1));
+        UserDto userDto = createUserDto(number);
+
+        User user = extendedUserFluentInterfaceApi.api().create().oneBy(userDto);
 
         Assertions.assertEquals(number, user.getNumber());
     }

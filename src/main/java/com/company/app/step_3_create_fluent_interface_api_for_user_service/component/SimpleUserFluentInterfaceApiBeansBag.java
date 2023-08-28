@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 @Getter
 @Service
 @RequiredArgsConstructor
-public class UserFluentInterfaceApiBeansBag {
+public class SimpleUserFluentInterfaceApiBeansBag {
 
     private final UserCreator userCreator;
     private final UserFinder userFinder;
