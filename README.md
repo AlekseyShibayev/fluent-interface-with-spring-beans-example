@@ -13,6 +13,7 @@
 1. Создадим классический юзер сервис - ClassicalUserService
 2. Делим классический юзер сервис на 4 части при помощи фасада - UserServiceFacade
 3. Делаем fluent interface api - UserFluentInterfaceApi
+4. Делаем на каждый метод отдельный bean, и предоставляем к нему доступ через fluent interface api - TODO
 
 
 
