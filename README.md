@@ -1,7 +1,7 @@
-# Учебно-прикладной проект fluent-interface-with-spring-beans-example
+# Учебный проект fluent-interface-with-spring-beans-example
 
   * [Ссылка на этот проект](https://github.com/AlekseyShibayev/fluent-interface-with-spring-beans-example)
-  * [Ссылка на различные обучающие курсы:](https://github.com/AlekseyShibayev/additional-education-info)
+  * [Ссылка на различные обучающие курсы](https://github.com/AlekseyShibayev/additional-education-info)
 
 ## Введение:
   * Make java great again!
@@ -18,7 +18,7 @@
 2. Делим классический юзер сервис на 4 части при помощи фасада - UserServiceFacade
 3. Делаем fluent interface api - UserFluentInterfaceApi
 4. Делаем на каждый метод отдельный bean (например UserCreateOneByUserDto), и предоставляем к нему доступ через fluent interface api - EntityApi.
-EntityApi может быть точкой входа для всех crud действий над всеми сущностями приложения.
+EntityApi может быть точкой входа для всех действий над всеми сущностями приложения.
 См. ещё примеры в EntityApiTest.
 
 
