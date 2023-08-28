@@ -20,8 +20,8 @@ public class User {
     @Column(name = "ID", nullable = false)
     private Long id;
 
-    @Column(name = "USER_NUMBER")
-    private String userNumber;
+    @Column(name = "NUMBER")
+    private String number;
 
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "USER_INFO_ID")

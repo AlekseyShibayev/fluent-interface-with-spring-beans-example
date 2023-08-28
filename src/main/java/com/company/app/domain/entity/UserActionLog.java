@@ -24,14 +24,11 @@ public class UserActionLog {
     @JoinColumn(name = "USER_ID", nullable = false)
     private User user;
 
-    @Column(name = "SOURCE")
-    private String source;
+    @Column(name = "SUBSCRIPTION_TYPE")
+    private String type;
 
-    @Column(name = "TARGET")
-    private String target;
-
-    @Column(name = "MESSAGE")
-    private String message;
+    @Column(name = "ACTION")
+    private String action;
 
     @Column(name = "DATE")
     private Date date;

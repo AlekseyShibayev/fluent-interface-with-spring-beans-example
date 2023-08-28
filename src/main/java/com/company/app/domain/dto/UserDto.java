@@ -14,7 +14,7 @@ import java.util.List;
 @Builder
 public class UserDto {
 
-    private String userNumber;
+    private String number;
     private List<UserActionLog> userActionLogs;
     private UserInfo userInfo;
     private List<Subscription> subscriptions;
