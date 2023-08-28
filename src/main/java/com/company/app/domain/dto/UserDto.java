@@ -4,14 +4,13 @@ import com.company.app.domain.entity.Subscription;
 import com.company.app.domain.entity.UserActionLog;
 import com.company.app.domain.entity.UserInfo;
 import lombok.*;
+import lombok.experimental.Accessors;
 
 import java.util.List;
 
 @Getter
 @Setter
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
+@Accessors(chain = true)
 public class UserDto {
 
     private String number;
