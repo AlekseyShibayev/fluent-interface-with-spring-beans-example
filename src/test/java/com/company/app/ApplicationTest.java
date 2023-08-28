@@ -6,7 +6,7 @@ import com.company.app.springboottest.SpringBootTestApplicationContext;
 import com.company.app.step_1_create_classical_user_service.ClassicalUserService;
 import com.company.app.step_2_create_facade_for_user_service.UserServiceFacade;
 import com.company.app.step_3_create_fluent_interface_api_for_user_service.SimpleUserFluentInterfaceApi;
-import com.company.app.step_4_update_fluient_interface_api_with_small_actions.ExtendedUserFluentInterfaceApi;
+import com.company.app.step_4_update_fluient_interface_api_with_small_actions.EntityApi;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +27,7 @@ class ApplicationTest extends SpringBootTestApplicationContext {
     @Autowired
     private SimpleUserFluentInterfaceApi simpleUserFluentInterfaceApi;
     @Autowired
-    private ExtendedUserFluentInterfaceApi extendedUserFluentInterfaceApi;
+    private EntityApi entityApi;
 
     @Test
     void context_must_be_test() {
@@ -69,7 +69,7 @@ class ApplicationTest extends SpringBootTestApplicationContext {
         String number = String.valueOf(counter.addAndGet(1));
         UserDto userDto = createUserDto(number);
 
-        User user = extendedUserFluentInterfaceApi.api().create().oneBy(userDto);
+        User user = entityApi.user().create().oneBy(userDto);
 
         Assertions.assertEquals(number, user.getNumber());
     }
