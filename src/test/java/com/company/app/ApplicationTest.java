@@ -1,6 +1,6 @@
 package com.company.app;
 
-import com.company.app.springboottest.application.SpringBootTestApplicationContext;
+import com.company.app.springboottest.SpringBootTestApplicationContext;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
