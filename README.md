@@ -12,7 +12,7 @@
 0. Подготовим domain и какие-то сторонние сервисы (service package)
 1. Создадим классический юзер сервис - ClassicalUserService
 2. Делим классический юзер сервис на 4 части при помощи фасада - UserServiceFacade
-3. Делаем fluent interface api
+3. Делаем fluent interface api - UserFluentInterfaceApi
 
 
 

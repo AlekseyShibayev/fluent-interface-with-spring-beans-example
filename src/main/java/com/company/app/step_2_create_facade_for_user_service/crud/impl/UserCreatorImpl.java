@@ -7,7 +7,6 @@ import com.company.app.domain.util.UserMapper;
 import com.company.app.service.AnyAnnotationForProxy;
 import com.company.app.service.HistoryService;
 import com.company.app.service.NotificationService;
-import com.company.app.step_1_create_classical_user_service.ClassicalUserService;
 import com.company.app.step_2_create_facade_for_user_service.crud.api.UserCreator;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
