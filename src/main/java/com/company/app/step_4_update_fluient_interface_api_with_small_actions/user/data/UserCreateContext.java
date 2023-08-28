@@ -8,15 +8,15 @@ import lombok.AllArgsConstructor;
 import java.util.List;
 
 @AllArgsConstructor
-public class UserApiCreateContext {
+public class UserCreateContext {
 
     private UserBeansBag beansBag;
 
     public User oneBy(UserDto userDto) {
-        return beansBag.getExtendedUserFluentInterfaceApiCreateOneByUserDto().oneBy(userDto);
+        return beansBag.getUserCreateOneByUserDto().oneBy(userDto);
     }
     public List<User> allBy(List<UserDto> userDtoList) {
-        return beansBag.getExtendedUserFluentInterfaceApiCreateAllByUserDtoList().allBy(userDtoList);
+        return beansBag.getUserCreateAllByUserDtoList().allBy(userDtoList);
     }
 
 }

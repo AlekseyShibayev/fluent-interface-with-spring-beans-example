@@ -8,8 +8,20 @@ public class UserContext {
 
     private UserBeansBag beansBag;
 
-    public UserApiCreateContext create() {
-        return new UserApiCreateContext(beansBag);
+    public UserCreateContext create() {
+        return new UserCreateContext(beansBag);
+    }
+
+    public UserFindContext find() {
+        return new UserFindContext(beansBag);
+    }
+
+    public UserUpdateContext update() {
+        return new UserUpdateContext(beansBag);
+    }
+
+    public UserRemoveContext remove() {
+        return new UserRemoveContext(beansBag);
     }
 
 }
