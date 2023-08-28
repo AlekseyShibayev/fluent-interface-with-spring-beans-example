@@ -19,6 +19,7 @@
 3. Делаем fluent interface api - UserFluentInterfaceApi
 4. Делаем на каждый метод отдельный bean (например UserCreateOneByUserDto), и предоставляем к нему доступ через fluent interface api - EntityApi.
 EntityApi может быть точкой входа для всех crud действий над всеми сущностями приложения.
+См. ещё примеры в EntityApiTest.
 
 
 

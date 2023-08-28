@@ -1,4 +1,4 @@
-package com.company.app.step_4_update_fluient_interface_api_with_small_actions.user.component.remove;
+package com.company.app.step_4_update_fluient_interface_api_with_small_actions.user.component.find;
 
 import com.company.app.domain.entity.User;
 import com.company.app.domain.repository.UserRepository;
@@ -12,17 +12,15 @@ import org.springframework.stereotype.Service;
 @Slf4j
 @Service
 @RequiredArgsConstructor
-public class UserRemoveByUser {
+public class UserFindByNumber {
 
     private final UserRepository userRepository;
     private final NotificationService notificationService;
     private final HistoryService historyService;
 
     @AnyAnnotationForProxy
-    public void byUser(User user) {
-        historyService.writeHistory();
-        userRepository.delete(user);
-        notificationService.doNotification();
+    public User getByUserNumber(String userNumber) {
+        return null;
     }
 
 }
