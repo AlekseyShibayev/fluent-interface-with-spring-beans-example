@@ -12,8 +12,8 @@ import java.util.Date;
 @AllArgsConstructor
 @EqualsAndHashCode(of = {"id"})
 @Entity
-@Table(name = "HISTORY")
-public class History {
+@Table(name = "USER_ACTION_LOG")
+public class UserActionLog {
 
     @Id
     @GeneratedValue
@@ -21,8 +21,8 @@ public class History {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "CHAT_ID", nullable = false)
-    private Chat chat;
+    @JoinColumn(name = "USER_ID", nullable = false)
+    private User user;
 
     @Column(name = "SOURCE")
     private String source;

@@ -24,6 +24,6 @@ public class Subscription {
     private String type;
 
     @ManyToMany(mappedBy = "subscriptions")
-    private Set<Chat> chats;
+    private Set<User> users;
 
 }

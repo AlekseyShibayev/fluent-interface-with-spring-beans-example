@@ -20,7 +20,7 @@ public class UserInfo {
     private Long id;
 
     @OneToOne(mappedBy = "userInfo")
-    private Chat chat;
+    private User user;
 
     @Column(name = "NAME")
     private String name;
