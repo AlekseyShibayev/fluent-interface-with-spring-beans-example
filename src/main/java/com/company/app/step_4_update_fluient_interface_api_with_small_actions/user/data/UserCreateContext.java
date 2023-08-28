@@ -15,6 +15,7 @@ public class UserCreateContext {
     public User oneBy(UserDto userDto) {
         return beansBag.getUserCreateOneByUserDto().oneBy(userDto);
     }
+
     public List<User> allBy(List<UserDto> userDtoList) {
         return beansBag.getUserCreateAllByUserDtoList().allBy(userDtoList);
     }

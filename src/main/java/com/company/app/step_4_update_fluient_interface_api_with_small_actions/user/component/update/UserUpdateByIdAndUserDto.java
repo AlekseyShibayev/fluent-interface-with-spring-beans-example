@@ -1,4 +1,4 @@
-package com.company.app.step_4_update_fluient_interface_api_with_small_actions.user.component.remove;
+package com.company.app.step_4_update_fluient_interface_api_with_small_actions.user.component.update;
 
 import com.company.app.domain.dto.UserDto;
 import com.company.app.domain.repository.UserRepository;
@@ -12,14 +12,14 @@ import org.springframework.stereotype.Service;
 @Slf4j
 @Service
 @RequiredArgsConstructor
-public class UserRemoveByUserDto {
+public class UserUpdateByIdAndUserDto {
 
     private final UserRepository userRepository;
     private final NotificationService notificationService;
     private final HistoryService historyService;
 
     @AnyAnnotationForProxy
-    public void byUserDto(UserDto userDto) {
+    public void by(Long id, UserDto userDto) {
 
     }
 
